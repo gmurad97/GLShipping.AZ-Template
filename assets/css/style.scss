@@ -1,9 +1,11 @@
-/*IMPORTS CSS - START*/
+/*IMPORTS CSS/FONTS - START*/
 @import url("../plugins/owlcarousel/css/owl.carousel.min.css");
 @import url("../plugins/owlcarousel/css/owl.theme.default.min.css");
 @import url("../plugins/fancybox/css/fancybox.css");
-@import url("../plugins/bootstrap/css/bootstrap.min.css");
-/*IMPORTS CSS - ENDED*/
+@import url("../plugins/bootstrap/css/bootstrap-grid.min.css");
+@import url("../fonts/gotham/stylesheet.css");
+@import url("../fonts/worksans/stylesheet.css");
+/*IMPORTS CSS/FONTS - ENDED*/
 
 *,
 *::before,
@@ -11,4 +13,224 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Gotham";
+    background-color: #001F1F;
+}
+
+.full-height {
+    height: 100% !important;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-image: url("../content/video/storm_waves_fix.png");
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    &__bg-video {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__bg-overlay {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-image: url("../content/img/angular_overlay.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        z-index: 1;
+    }
+
+    &__main-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 100px 0px;
+    }
+
+    &__main-ship {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: auto;
+        z-index: -1;
+    }
+
+    &__main-ship-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transform: rotate(225deg);
+    }
+
+    &__main-text-block {
+        width: 100%;
+    }
+
+    &__main-text-title {
+        font-family: 'Gotham';
+        font-size: 82px;
+        text-transform: uppercase;
+        line-height: 82px;
+        letter-spacing: -4px;
+        color: #FFFFFF;
+    }
+
+    &__main-text-description {
+        max-width: 480px;
+        font-family: "Work Sans";
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    &__main-btn-link {
+        background-color: #00BD92;
+        border: none;
+        border-radius: 24px;
+        outline: none;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        color: #FFFFFF;
+        padding: 12px 18px;
+        margin-top: 8px;
+        transition: background-color 128ms linear;
+
+        &:hover {
+            background-color: darken($color: #00BD92, $amount: 8);
+        }
+    }
+
+    &__main-btn-icon {
+        transform: rotate(45deg);
+        font-size: 14px;
+    }
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+
+    &__logo {
+        width: 150px;
+        height: auto;
+    }
+
+    &__logo-link {
+        text-decoration: none;
+    }
+
+    &__logo-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__btn-menu {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        border-radius: 24px;
+        outline: none;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        color: #FFFFFF;
+        padding: 12px 18px;
+        margin-right: 16px;
+        cursor: pointer;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 0%;
+            height: 100%;
+            background-color: darken($color: #00BD92, $amount: 8);
+            transition: width 256ms linear, background-color 128ms linear;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }
+    }
+
+    &__btn-menu-icon {
+        font-size: 14px;
+        margin-right: 4px;
+    }
+
+    &__btn-auth {
+        background-color: #00BD92;
+        border: none;
+        border-radius: 24px;
+        outline: none;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        color: #FFFFFF;
+        padding: 12px 18px;
+
+        &:hover {
+            background-color: darken($color: #00BD92, $amount: 8);
+        }
+    }
+
+    &__btn-auth-icon {
+        transform: rotate(45deg);
+        font-size: 14px;
+    }
 }
