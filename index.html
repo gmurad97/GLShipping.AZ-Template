@@ -25,7 +25,7 @@
                     </a>
                 </div>
                 <div class="navbar__btn">
-                    <button type="button" class="navbar__btn-menu">
+                    <button type="button" class="navbar__btn-menu" id="navbar_menu_show">
                         <i class="fa-solid fa-bars navbar__btn-menu-icon"></i>
                         Menu
                     </button>
@@ -36,17 +36,36 @@
                 </div>
             </nav>
         </div>
+
+
+        <div class="navbar__menu">
+            <button class="navbar__menu-close" id="navbar_menu_close">
+                <i class="fa-solid fa-xmark navbar__menu-icon"></i>
+            </button>
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="#" class="navbar__link">Main Page</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" class="navbar__link">About us</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#" class="navbar__link">Services</a>
+                </li>
+            </ul>
+
+        </div>
+
+
         <div class="container full-height">
             <div class="header__main-content">
                 <div class="header__main-ship">
                     <img src="assets/content/img/ship_header.png" class="header__main-ship-img" alt="Ship">
                 </div>
-
                 <div class="header__main-text-block d-flex flex-column justify-content-start align-items-start">
                     <h1 class="header__main-text-title">Green Line</h1>
                     <h1 class="header__main-text-title">Shipping</h1>
                 </div>
-
                 <div class="header__main-text-block d-flex flex-column justify-content-start align-items-end">
                     <p class="header__main-text-description">
                         Suspendisse egestas, felis vitae placerat laoreet, risus sapien
@@ -59,8 +78,6 @@
                         <i class="fas fa-arrow-up header__main-btn-icon"></i>
                     </a>
                 </div>
-
-
             </div>
         </div>
     </header>
