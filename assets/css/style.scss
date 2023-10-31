@@ -1,11 +1,7 @@
-/*IMPORTS CSS/FONTS - START*/
-@import url("../plugins/owlcarousel/css/owl.carousel.min.css");
-@import url("../plugins/owlcarousel/css/owl.theme.default.min.css");
-@import url("../plugins/fancybox/css/fancybox.css");
-@import url("../plugins/bootstrap/css/bootstrap-grid.min.css");
+/*IMPORTS FONTS - START*/
 @import url("../fonts/gotham/stylesheet.css");
 @import url("../fonts/worksans/stylesheet.css");
-/*IMPORTS CSS/FONTS - ENDED*/
+/*IMPORTS FONTS - ENDED*/
 
 *,
 *::before,
@@ -574,7 +570,7 @@ body {
     &__absolute {
         position: absolute;
         width: 150px;
-        height: 150px;        
+        height: 150px;
     }
 
     &__absolute-img {
