@@ -77,4 +77,12 @@ $(document).ready(function () {
         } */
     });
     /* PARTNERS CAROUSEL - ENDED */
+
+    /* CERT FANCYBOX IMG - START */
+    if ($("[data-fancybox]").length > 0) {
+        Fancybox.bind("[data-fancybox]", {
+            loop:true,
+        });
+    }
+    /* CERT FANCYBOX IMG - ENDED */
 });
