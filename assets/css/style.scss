@@ -16,15 +16,17 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #054241;
+    background-color: #00BD92;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #00BD92;
+    background-color: #054241;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-button {
-    background-color: #00BD92;
+    background-color: #054241;
+    border: 1px solid #00BD92;
 }
 
 ::-webkit-scrollbar-corner {
@@ -53,6 +55,7 @@ html {
 body {
     font-family: "Gotham";
     background-color: #001F1F;
+    overflow-x: hidden;
 }
 
 #partners_carousel_i {
@@ -224,7 +227,6 @@ body {
 
     &__about {
         width: 100%;
-        height: auto;
         overflow: hidden;
     }
 
@@ -330,11 +332,11 @@ body {
     padding: 24px;
 
     &__menu {
-        position: absolute;
+        position: fixed;
         top: 0px;
         left: 0px;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.70);
@@ -379,7 +381,7 @@ body {
         display: flex;
 
         &:not(:last-of-type) {
-            margin-bottom: 16px;
+            margin-bottom: 24px;
         }
     }
 
@@ -524,14 +526,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px 0px;
+    margin: 64px 0px;
 
     &__overlay-start {
         position: absolute;
         top: -784px;
         left: -1024px;
-        width: 1500px;
-        height: 1500px;
+        width: 1792px;
+        height: 1792px;
         background-image: radial-gradient(circle, rgba(0, 189, 146, 0.32) 0%, rgba(0, 159, 124, 0.16) 45%, rgba(0, 31, 31, 0) 64%);
         background-size: cover;
         background-position: center center;
@@ -542,9 +544,9 @@ body {
     &__overlay-end {
         position: absolute;
         top: -512px;
-        left: 784px;
-        width: 1500px;
-        height: 1500px;
+        left: 512px;
+        width: 1792px;
+        height: 1792px;
         background-image: radial-gradient(circle, rgba(0, 189, 146, 0.32) 0%, rgba(0, 159, 124, 0.16) 45%, rgba(0, 31, 31, 0) 64%);
         background-size: cover;
         background-position: center center;
@@ -555,10 +557,10 @@ body {
     &__title {
         font-family: "Gotham";
         font-size: 64px;
-        font-weight: 600;
+        font-weight: 800;
         text-transform: uppercase;
         color: #FFFFFF;
-        margin-bottom: 64px;
+        margin-bottom: 32px;
 
     }
 }
@@ -571,7 +573,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
-    padding: 100px 0px;
+    padding: 64px 0px;
 
     &__title {
         font-family: "Gotham";
@@ -579,7 +581,7 @@ body {
         font-weight: 600;
         text-transform: uppercase;
         color: #001F1F;
-        margin-bottom: 100px;
+        margin-bottom: 48px;
     }
 }
 
@@ -619,8 +621,8 @@ body {
     }
 
     &__description {
-        font-family: "Work Sans";
-        font-size: 16px;
+        font-family: "Gotham";
+        font-size: 15px;
         font-weight: 300;
         line-height: 26px;
         color: #FFFFFF;
@@ -719,7 +721,7 @@ body {
     background-color: #054241;
     border-radius: 32px;
     padding: 64px 64px 256px 64px;
-    margin-bottom: 384px;
+    margin-bottom: 333px;
 
     &__absolute {
         position: absolute;
@@ -779,6 +781,7 @@ body {
         font-family: "Work Sans";
         font-size: 14px;
         font-weight: 400;
+        line-height: 24px;
         color: #969696;
         margin: 32px 0px;
         padding-right: 128px;
@@ -951,6 +954,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 0px 64px;
+    margin-bottom: 100px;
 
     &__block {
 
@@ -981,17 +985,15 @@ body {
     }
 }
 
-
-
-
-
 .section-services {
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 128px;
 
     &__title {
         font-family: "Gotham";
@@ -1015,7 +1017,7 @@ body {
         border-radius: 32px;
         overflow: hidden;
 
-        &--selected{
+        &--selected {
             background-color: #00BD92;
         }
     }
@@ -1040,8 +1042,18 @@ body {
         width: 100%;
         height: 100%;
         background-image: linear-gradient(0deg, rgba(0, 189, 146, 0.88) 0%, rgba(0, 159, 124, 0.20) 100%);
-        backdrop-filter: blur(1px);
-        opacity: 0.77;
+        opacity: 0.64;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            opacity: 0.32;
+        }
     }
 
     &__body {
@@ -1066,11 +1078,6 @@ body {
         color: #F2F2F2;
     }
 }
-
-
-
-
-
 
 .footer {
     width: 100%;
@@ -1332,7 +1339,7 @@ body {
         height: auto;
         background-color: #FFFFFF;
         border-radius: 32px;
-        padding: 32px;
+        padding: 48px;
     }
 
     &__img {
