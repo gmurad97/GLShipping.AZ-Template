@@ -248,7 +248,7 @@ body {
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: center;
         align-items: center;
     }
@@ -1585,11 +1585,21 @@ body {
     .nav__list {
         justify-content: flex-start;
     }
-    .footer__about{
+
+    .footer__about {
         padding: 0px;
     }
-    .footer__contact{
+
+    .footer__contact {
         padding: 0px;
+    }
+
+    .header__about-title {
+        font-size: 48px;
+    }
+
+    .header__about-content{
+        flex-direction: column-reverse;
     }
 }
 
@@ -1599,23 +1609,29 @@ body {
         font-size: 50px;
         line-height: 50px;
     }
+
     .header__main-ship {
         left: 80%;
     }
-    .about-us__stats-block{
+
+    .about-us__stats-block {
         flex-direction: column;
     }
-    .about-us__stats{
+
+    .about-us__stats {
         margin: 0px;
         margin-bottom: 32px;
     }
-    .about-us__description{
+
+    .about-us__description {
         padding: 0;
     }
-    .about-us__absolute{
+
+    .about-us__absolute {
         display: none;
     }
-    .about-us{
+
+    .about-us {
         padding: 64px;
         margin-bottom: 0px;
     }
@@ -1623,46 +1639,65 @@ body {
 
 @media screen and (max-width: 576px) {
 
-    .header__bg-video{
+    .header__bg-video {
         display: none;
     }
-    .header__main-ship{
+
+    .header__main-ship {
         display: none;
     }
-    .navbar{
+
+    .navbar {
         flex-direction: column;
     }
-    .navbar__logo{
+
+    .navbar__logo {
         margin-bottom: 32px;
     }
-    .about-us{
+
+    .about-us {
         padding: 32px;
     }
-    .about-us__title-brand{
+
+    .about-us__title-brand {
         font-size: 24px;
     }
-    .about-us__title{
+
+    .about-us__title {
         font-size: 24px;
     }
+
     .section-white__title {
         font-size: 32px;
     }
-    .section__title{
+
+    .section__title {
         font-size: 32px;
     }
-    .nav__list{
+
+    .nav__list {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
-    .nav__item{
-        &:not(:last-of-type){
+
+    .nav__item {
+        &:not(:last-of-type) {
             margin: 0px;
             margin-bottom: 16px;
         }
     }
-    .news__block{
+
+    .news__block {
         padding: 32px 0px;
+    }
+
+    .services__block {
+        padding: 16px;
+    }
+
+    .header__main-content {
+        padding: 50px 0px;
     }
 }
 
