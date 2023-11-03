@@ -181,6 +181,20 @@ body {
 
     &__main-text-block {
         width: 100%;
+
+        &--title {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        &--description {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
     }
 
     &__main-text-title {
@@ -329,7 +343,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: 24px 0px;
 
     &__menu {
         position: fixed;
@@ -648,7 +662,7 @@ body {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
 
     &__block {
         width: 100%;
@@ -807,9 +821,9 @@ body {
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: revert;
+        flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
     }
 
     &__stats {
@@ -1044,7 +1058,7 @@ body {
         background-image: linear-gradient(0deg, rgba(0, 189, 146, 0.88) 0%, rgba(0, 159, 124, 0.20) 100%);
         opacity: 0.64;
 
-        &::before{
+        &::before {
             content: "";
             position: absolute;
             top: 0px;
@@ -1091,7 +1105,7 @@ body {
         width: 100%;
         height: auto;
         display: flex;
-        flex-direction: row;
+        flex-flow: row;
         justify-content: center;
         align-items: flex-end;
         padding: 100px 0px;
@@ -1104,6 +1118,7 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-right: 32px;
     }
 
     &__about-img-block {
@@ -1171,6 +1186,7 @@ body {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        padding-left: 32px;
     }
 
     &__footer {
@@ -1335,11 +1351,12 @@ body {
     }
 
     &__img-block {
-        width: 100%;
+        width: 444px;
         height: auto;
         background-color: #FFFFFF;
         border-radius: 32px;
         padding: 48px;
+        margin-right: 48px;
     }
 
     &__img {
@@ -1418,3 +1435,237 @@ body {
         margin-left: 4px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .header__main-text-title {
+        font-size: 64px;
+        line-height: 64px;
+    }
+
+    .header__main-text-description {
+        max-width: 333px;
+    }
+
+    .about-us__title-brand {
+        font-size: 48px;
+    }
+
+    .about-us__title {
+        font-size: 48px;
+    }
+
+    .about-us__stats-num {
+        font-size: 48px;
+    }
+
+    .about-us__stats-title {
+        font-size: 16px;
+    }
+
+    .about-us__logo {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header__main-text-block--description {
+        align-items: flex-start;
+    }
+
+    .header__main-ship {
+        left: 70%;
+        width: 256px;
+    }
+
+    .header__main-ship-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transform: rotate(190deg);
+        filter: drop-shadow(16px 24px 16px rgba(0, 0, 0, 64));
+        animation: rocking 3072ms linear infinite alternate;
+    }
+
+
+
+    @keyframes rocking {
+        0% {
+            transform: rotate(189deg) skew(-1deg, -1deg);
+        }
+
+        50% {
+            transform: rotate(190deg) skew(0deg, 0deg);
+        }
+
+        100% {
+            transform: rotate(191deg) skew(1deg, 1deg);
+        }
+    }
+
+
+    .header__main-btn-link {
+        margin-top: 16px;
+    }
+
+    .header__main-text-block--title {
+        margin-bottom: 32px;
+    }
+
+    .about__title {
+        font-size: 32px;
+    }
+
+    .about__description {
+        font-size: 12px;
+    }
+
+    .section__title {
+        font-size: 48px;
+    }
+
+    .section-white__title {
+        font-size: 48px;
+    }
+
+    .about-us__title-brand {
+        font-size: 32px;
+    }
+
+    .about-us__title {
+        font-size: 32px;
+    }
+
+    .about-us__logo {
+        display: none;
+    }
+
+    .about-us__stats-num {
+        font-size: 32px;
+    }
+
+    .news__block {
+        flex-direction: column;
+    }
+
+    .news__img-block {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 48px;
+    }
+
+    .footer__body {
+        flex-direction: column;
+    }
+
+    .footer__about {
+        margin-bottom: 64px;
+    }
+
+    .footer__navigation {
+        margin-bottom: 64px;
+    }
+
+    .footer__contact {
+        margin-bottom: 0px;
+    }
+
+    .footer__social {
+        justify-content: flex-start;
+    }
+
+    .nav__list {
+        justify-content: flex-start;
+    }
+    .footer__about{
+        padding: 0px;
+    }
+    .footer__contact{
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .header__main-text-title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .header__main-ship {
+        left: 80%;
+    }
+    .about-us__stats-block{
+        flex-direction: column;
+    }
+    .about-us__stats{
+        margin: 0px;
+        margin-bottom: 32px;
+    }
+    .about-us__description{
+        padding: 0;
+    }
+    .about-us__absolute{
+        display: none;
+    }
+    .about-us{
+        padding: 64px;
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .header__bg-video{
+        display: none;
+    }
+    .header__main-ship{
+        display: none;
+    }
+    .navbar{
+        flex-direction: column;
+    }
+    .navbar__logo{
+        margin-bottom: 32px;
+    }
+    .about-us{
+        padding: 32px;
+    }
+    .about-us__title-brand{
+        font-size: 24px;
+    }
+    .about-us__title{
+        font-size: 24px;
+    }
+    .section-white__title {
+        font-size: 32px;
+    }
+    .section__title{
+        font-size: 32px;
+    }
+    .nav__list{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .nav__item{
+        &:not(:last-of-type){
+            margin: 0px;
+            margin-bottom: 16px;
+        }
+    }
+    .news__block{
+        padding: 32px 0px;
+    }
+}
+
+/* @media screen and (max-width: 576px) {
+    
+} */
