@@ -1535,6 +1535,10 @@ body {
         font-size: 48px;
     }
 
+    .section-services__title{
+        font-size: 48px;
+    }
+
     .about-us__title-brand {
         font-size: 32px;
     }
@@ -1671,7 +1675,9 @@ body {
 }
 
 @media screen and (max-width: 576px) {
-
+    .navbar__btn-menu:before{
+        width: 100%;
+    }
 
 .about-services__block{
     flex-direction: column;
@@ -1719,6 +1725,10 @@ body {
 
     .about-us__title {
         font-size: 24px;
+    }
+
+    .section-services__title{
+        font-size: 32px;
     }
 
     .section-white__title {
