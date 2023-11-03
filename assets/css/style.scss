@@ -55,7 +55,6 @@ html {
 body {
     font-family: "Gotham";
     background-color: #001F1F;
-    overflow-x: hidden;
 }
 
 #partners_carousel_i {
@@ -566,6 +565,10 @@ body {
         background-position: center center;
         background-repeat: no-repeat;
         z-index: -1;
+
+        &--services {
+            top: -64px;
+        }
     }
 
     &__title {
@@ -1435,15 +1438,6 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 1200px) {
     .header__main-text-title {
         font-size: 64px;
@@ -1494,8 +1488,6 @@ body {
         animation: rocking 3072ms linear infinite alternate;
     }
 
-
-
     @keyframes rocking {
         0% {
             transform: rotate(189deg) skew(-1deg, -1deg);
@@ -1509,7 +1501,6 @@ body {
             transform: rotate(191deg) skew(1deg, 1deg);
         }
     }
-
 
     .header__main-btn-link {
         margin-top: 16px;
@@ -1535,7 +1526,7 @@ body {
         font-size: 48px;
     }
 
-    .section-services__title{
+    .section-services__title {
         font-size: 48px;
     }
 
@@ -1601,29 +1592,35 @@ body {
         font-size: 48px;
     }
 
-    .header__about-content{
+    .header__about-content {
         flex-direction: column-reverse;
     }
-    .header__about-img-container{
+
+    .header__about-img-container {
         margin-bottom: 128px;
     }
 
-    .header__about-text{
+    .header__about-text {
         align-items: center;
     }
-    .header__about-img-text{
+
+    .header__about-img-text {
         left: 0px;
         max-width: 100%;
     }
-    .header__about-img-block:before{
+
+    .header__about-img-block:before {
         display: none;
     }
-    .about-description__img-block{
+
+    .about-description__img-block {
         display: none;
     }
-    .about-description{
+
+    .about-description {
         padding: 64px;
     }
+
     .certificate__block:before {
         height: 150px;
     }
@@ -1631,10 +1628,23 @@ body {
 
 @media screen and (max-width: 768px) {
 
-    .about-services__title{
+    .section__overlay-start {
+        display: none;
+    }
+
+    .section__overlay-end {
+        display: none;
+    }
+
+    .section__overlay-end--services {
+        display: none;
+    }
+
+    .about-services__title {
         font-size: 18px;
     }
-    .certificate__img-block{
+
+    .certificate__img-block {
         margin-bottom: 32px;
     }
 
@@ -1675,30 +1685,33 @@ body {
 }
 
 @media screen and (max-width: 576px) {
-    .navbar__btn-menu:before{
+    .navbar__btn-menu:before {
         width: 100%;
     }
 
-.about-services__block{
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
+    .about-services__block {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 
-.about-services__icon{
-    margin: 0px;
-    margin-bottom: 16px;
-}
+    .about-services__icon {
+        margin: 0px;
+        margin-bottom: 16px;
+    }
 
-    .header__about-title{
+    .header__about-title {
         font-size: 32px;
     }
+
     .header__about-img-text {
         padding: 24px;
     }
-    .about-description{
+
+    .about-description {
         padding: 32px;
     }
+
     .header__bg-video {
         display: none;
     }
@@ -1727,7 +1740,7 @@ body {
         font-size: 24px;
     }
 
-    .section-services__title{
+    .section-services__title {
         font-size: 32px;
     }
 
@@ -1764,7 +1777,3 @@ body {
         padding: 50px 0px;
     }
 }
-
-/* @media screen and (max-width: 576px) {
-    
-} */
