@@ -55,6 +55,7 @@ html {
 body {
     font-family: "Gotham";
     background-color: #001F1F;
+    overflow-x: hidden;
 }
 
 #partners_carousel_i {
@@ -140,9 +141,8 @@ body {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 100px 0px;
+        justify-content: center;
+        align-items: center;
     }
 
     &__main-ship {
@@ -240,7 +240,6 @@ body {
 
     &__about {
         width: 100%;
-        overflow: hidden;
     }
 
     &__about-content {
@@ -567,7 +566,7 @@ body {
         z-index: -1;
 
         &--services {
-            top: -64px;
+            top: -256px;
         }
     }
 
@@ -760,6 +759,7 @@ body {
 
     &__block-text {
         width: 100%;
+        max-width: 1024px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -1771,9 +1771,5 @@ body {
 
     .services__block {
         padding: 16px;
-    }
-
-    .header__main-content {
-        padding: 50px 0px;
     }
 }
