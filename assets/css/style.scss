@@ -21,7 +21,8 @@
 
 ::-webkit-scrollbar-thumb {
     background-color: #054241;
-    border-radius: 4px;
+    border-left: 1px solid #00BD92;
+    border-right: 1px solid #00BD92;
 }
 
 ::-webkit-scrollbar-button {
@@ -197,17 +198,22 @@ body {
     }
 
     &__main-text-title {
-        font-family: 'Gotham';
+        font-family: "Gotham";
         font-size: 82px;
         text-transform: uppercase;
         line-height: 82px;
         letter-spacing: -4px;
         color: #FFFFFF;
+
+        &:first-of-type {
+            color: transparent;
+            -webkit-text-stroke: 4px #00BD92;
+        }
     }
 
     &__main-text-description {
         max-width: 480px;
-        font-family: "Work Sans";
+        font-family: "Gotham";
         font-size: 14px;
         font-weight: 300;
         line-height: 24px;
@@ -240,6 +246,15 @@ body {
 
     &__about {
         width: 100%;
+    }
+
+    &__global {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: auto;
+        z-index: 1;
     }
 
     &__about-content {
@@ -440,7 +455,7 @@ body {
     }
 
     &__logo {
-        width: 150px;
+        width: 160px;
         height: auto;
     }
 
@@ -566,7 +581,7 @@ body {
         z-index: -1;
 
         &--services {
-            top: -256px;
+            top: -768px;
         }
     }
 
@@ -759,7 +774,7 @@ body {
 
     &__block-text {
         width: 100%;
-        max-width: 1024px;
+        max-width: 768px;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -795,7 +810,7 @@ body {
     }
 
     &__description {
-        font-family: "Work Sans";
+        font-family: "Gotham";
         font-size: 14px;
         font-weight: 400;
         line-height: 24px;
@@ -850,7 +865,7 @@ body {
 
     &__stats-title {
         font-family: "Work Sans";
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 400;
         color: #00BD92;
     }
@@ -1146,7 +1161,7 @@ body {
     }
 
     &__about-text {
-        font-family: "Work Sans";
+        font-family: "Gotham";
         font-size: 14px;
         font-weight: 300;
         line-height: 24px;
@@ -1352,6 +1367,15 @@ body {
         }
     }
 
+    &__block--detail {
+        border: none;
+        padding: 0px;
+
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+
     &__img-block {
         width: 444px;
         height: auto;
@@ -1359,6 +1383,10 @@ body {
         border-radius: 32px;
         padding: 48px;
         margin-right: 48px;
+    }
+
+    &__img-block--detail {
+        width: 800px;
     }
 
     &__img {
@@ -1408,6 +1436,10 @@ body {
             color: #F3F0F0;
             border-bottom: 1px solid #F3F0F0;
         }
+    }
+
+    &__read-more--detail {
+        margin-bottom: 16px;
     }
 
     &__read-more-icon {
